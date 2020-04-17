@@ -21,6 +21,11 @@ https://dash.akamaized.net/dash264/TestCases/1c/qualcomm/2/BBB_720_1M_video_4915
 
 The server returns 404 error.
 
+I reproduced this issue on following environment.
++ macOS Catalina 10.15.2
++ Chrome 80.0.3987.163
++ THEOplayer 2.69.1
+
 ## How to run
 
 ```sh
