@@ -4,9 +4,22 @@ I found that THEOplayer 2.69.1 cannot play a DASH stream under certain condition
 Here is conditions.
 1. Live manifest
 2. SegmentTimeline is used
-3. Period@start contains third number after the decimal point.
+3. Period@start contains third non zero number after the decimal point.
   + OK: `PT1587091109.080000S`
   + NG: `PT1587091109.008000S`
+
+When it cannot play, it requests wrong segment URL.
+In this project, it suppose to send next segment URL.
+```
+https://dash.akamaized.net/dash264/TestCases/1c/qualcomm/2/BBB_720_1M_video_491520.mp4
+```
+
+However, it sends URL with 491519(491520 - 1).
+```
+https://dash.akamaized.net/dash264/TestCases/1c/qualcomm/2/BBB_720_1M_video_491519.mp4
+```
+
+The server returns 404 error.
 
 ## How to run
 
