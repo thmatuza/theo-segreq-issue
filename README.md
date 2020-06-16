@@ -1,5 +1,7 @@
 # THEOplayer 2.69.1 SegmentTimeline issue reproduction project
 
+**I confirmed this bug has been fixed at THEOplayer 2.71.0**
+
 I found that THEOplayer 2.69.1 cannot play a DASH stream under certain conditions.
 Here is conditions.
 1. Live manifest
